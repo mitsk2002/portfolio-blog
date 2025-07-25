@@ -1,12 +1,11 @@
 const projects = [
-    // ============ API Projects ============
-
+  // ============ API Projects ============
   {
     id: 1,
     title: "Joke Generator",
     description: "Generates random jokes using an external API.",
     repo: "https://github.com/mitsk2002/API-projects/tree/main/API%20projects/Joke%20Generator",
-    live: "", // If you deployed it somewhere like Netlify or GitHub Pages
+    live: "",
     tech: ["HTML", "CSS", "JavaScript", "API"]
   },
   {
@@ -24,12 +23,10 @@ const projects = [
     repo: "https://github.com/mitsk2002/Vanilla-js-projects/tree/main/Projects%20-%20Traversy%20Media/Task%20Tracker",
     live: "",
     tech: ["HTML", "CSS", "JavaScript"]
-  }
-  // ...continue through all 17 API projects...
-];
+  },
 
   // ============ Vanilla JS Projects ============
- {
+  {
     id: 18,
     title: "Blurry Loading Page",
     description: "Blurry Loading Page image going from 0%-100%.",
@@ -68,7 +65,7 @@ const projects = [
     repo: "https://github.com/mitsk2002/Vanilla-js-projects/tree/main/Projects%20-%20Traversy%20Media/Task%20Tracker",
     live: "",
     tech: ["JavaScript", "HTML", "CSS"]
-  },
+  }
 ];
 
 export default projects;
