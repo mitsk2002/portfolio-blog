@@ -1,5 +1,0 @@
-currencies = [
-    "AED",
-    "AFN",
-    "ALL"
-]
