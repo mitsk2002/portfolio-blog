@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio-blog/', 
+  base: '/portfolio-blog/',
+  build: {
+    outDir: 'dist',
+  }
 })

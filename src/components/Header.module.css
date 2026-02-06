@@ -1,0 +1,57 @@
+.header {
+  position: relative;
+  padding: 1rem;
+  background-color: #f9f7f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d4af37;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.bg {
+  background-image: url('/images/flower-of-life-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120px;
+  opacity: 0.05;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.logo,
+.nav,
+.link {
+  z-index: 1;
+}
+
+.logo {
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #d4af37;
+}

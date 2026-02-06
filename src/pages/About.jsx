@@ -1,39 +1,93 @@
+import React from "react";
+import styles from "./About.module.css";
+
 export default function About() {
   return (
-    <main>
-      <h1>About Me</h1>
-      <p>
-I am a self-taught web developer since August of 2023. The road has been long but rewarding. I have been a medical LMT in the US healthcare system since 2016. While my passion is healing, I have learned that A) I will never be able to financially thrive doing solely healing work, and B) I need a retirement plan that is not reliant on my body. <br /><br />
+    <main className={styles.container}>
+      <h1 className={styles.heading}>About Me</h1>
 
-In 2009 I completed a BA in Foreign Languages (Japanese & Spanish). I have always had a passion for languages. Computer languages have always seemed closely related to foreign languages. Plus, technology has always been an interest of mine. The one computer science class I took in college was led by an impatient teacher. This dampened my spirits and motivation to learning anything in the field of technology for a while. Until I finally made the commitment in 2023 to learn on my own. One of the things I love about technology, is that it is entirely possible to learn on your own. Especially with AI by your side. Huge shout out to FreeCodeCamp.org for being my first and favorite platform for learning the foundations of web development. <br /><br />
+      <p className={styles.paragraph}>
+        I’m a self-taught front-end web developer with a background in
+        healthcare, training, and foreign languages. Since 2016, I’ve worked as
+        a medical LMT in the U.S. healthcare system. While my passion is
+        healing, I came to realize two important things: (A) financial security
+        in healing work alone is difficult to achieve, and (B) I need a
+        sustainable long-term path that doesn't rely on my body.
+      </p>
 
-Since starting my web development journey in 2023, a lot has changed - both personally and in the broader field of technology. AI has grown smarter, and in May 2025 I moved from Seattle to Dallas to start a new chapter in my life. <br /><br />
+      <p className={styles.paragraph}>
+        I earned my BA in Foreign Languages (Japanese & Spanish) in 2009. I’ve
+        always loved language — and computer languages feel like a natural
+        extension of that interest. Although my first exposure to computer
+        science in college was discouraging, I made the commitment in 2023 to
+        teach myself web development. One of the things I love about tech is
+        that it rewards self-motivation and continuous learning — especially
+        with open resources and AI tools. Huge shoutout to FreeCodeCamp.org for
+        helping me build my foundation.
+      </p>
 
-My goal is to be a remote contract web developer. Working with companies that prioritize hiring local, and thus supporting their community, and ultimately their country. <br /><br />
+      <p className={styles.paragraph}>
+        Since starting my tech journey, both my personal life and the industry
+        have evolved rapidly. I relocated from Seattle to Dallas in May 2025,
+        and I’ve continued sharpening my skills in HTML, CSS, JavaScript, and
+        API integration.
+      </p>
 
-I have done contract work for Amazon and other corporations who outsource a large part of their labor overseas. I have seen firsthand the damage done to both local communities and the globe as a whole, as a result of outsourcing. Just because something is legal, doesn’t meant make it ethical. And so I choose to only work with companies who understand this, and thus prioritize their community. <br /><br />
+      <h2 className={styles.subheading}>What I’m Looking For</h2>
+      <p className={styles.paragraph}>
+        Open to immediate short-term or contract-to-hire roles.
+        <br />
+        I’m currently seeking a <strong>remote W2 contract role</strong> in web
+        development where I can contribute to:
+      </p>
+      <ul className={styles.list}>
+        <li>Website maintenance, debugging, or UI cleanup</li>
+        <li>Front-end feature building with clear tasks and communication</li>
+        <li>QA, accessibility testing, or documentation support</li>
+      </ul>
+      <p className={styles.paragraph}>
+        My short-term goal is to become a reliable contributor on a
+        collaborative dev team. Long-term, I’m exploring security, automation,
+        and open-source contributions as areas to grow into.
+      </p>
 
-Some of my other passions and interests include:<br />
+      <h2 className={styles.subheading}>My Values</h2>
+      <p className={styles.paragraph}>
+        I’ve done contract work for Amazon and other corporations that outsource
+        heavily. I’ve seen the harm this can do to local economies. That’s why
+        I’m committed to working with companies that prioritize community
+        investment and local hiring. Just because something is legal doesn’t
+        mean it’s ethical.
+      </p>
 
-<ul>
-  <li>fitness (calisthenics/gymnastics)</li>
-  <li>health and nutrition</li>
-  <li>homesteading/gardening (currently adjusting to apartment life, until I get a bigger house/property)</li>
-  <li>manifesting/metaphysics/spirituality/astrology</li>
-  <li>productivity</li>
-  <li>financial freedom</li>
-  <li>video games (PS5 owner)</li>
-  <li>travel</li>
-  <li>being biracial</li>
-  <li>local community enrichment</li>
-  <li>Dogs (German Shepherd’s)</li>
-</ul>
+      <h2 className={styles.subheading}>Beyond Tech</h2>
+      <p className={styles.paragraph}>
+        Some of my other passions and interests include:
+      </p>
+      <ul className={styles.list}>
+        <li>Fitness (calisthenics & gymnastics)</li>
+        <li>Health & nutrition</li>
+        <li>Homesteading/gardening (adapting to apartment life for now)</li>
+        <li>Manifesting, metaphysics, astrology, and spirituality</li>
+        <li>Productivity & financial freedom</li>
+        <li>Video games (PS5 owner)</li>
+        <li>Travel</li>
+        <li>Biracial identity & cultural awareness</li>
+        <li>Local community enrichment</li>
+        <li>Dogs (especially German Shepherds)</li>
+      </ul>
 
-I will be using this site not only as my portfolio, but as a blog to showcase my journey. I am not very materialistic, but I do need to buy things from time to time like everyone else. So when I do find products that I love, I will post them here, along with affiliate links. <br /><br />
+      <p className={styles.paragraph}>
+        I’ll be using this site not only as a portfolio, but also as a blog to
+        document my journey. I’m not very materialistic, but I do enjoy sharing
+        the things that bring value to my life — including tools, products, or
+        resources I’ve personally vetted. Expect to see affiliate links and
+        reviews woven into my posts.
+      </p>
 
-My hope is that others will take inspiration and motivation from my journey. 
-
-
+      <p className={styles.paragraph}>
+        My hope is that others — especially career changers, creatives, and
+        lifelong learners — will find motivation and guidance in my story.
       </p>
     </main>
   );

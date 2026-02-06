@@ -1,5 +1,10 @@
 {
-  "name": "my-portfolio",
+  "name": "portfolio-blog",
+  "homepage": "https://mitsk2002.github.io/portfolio-blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitsk2002/portfolio-blog.git"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +18,8 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
