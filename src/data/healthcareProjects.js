@@ -31,17 +31,17 @@ export const healthcareProjects = [
     repo: "https://github.com/mitsk2002/healthcare-scheduler",
   },
   {
-    id: 3,
-    title: "Claims Navigator",
-    summary: {
-      who: "Billing specialists and front desk staff at small-to-mid-sized outpatient clinics without enterprise billing systems",
-      problem: "Manual re-entry of claim data across portals causes formatting errors that trigger denials, delaying reimbursements. Staff waste hours checking payer websites and tracking claim status, leading to revenue leakage and burnout.",
-      impact: "Even small improvements in claims accuracy improve cash flow and reduce denial rates, which is critical for cash-strapped practices.",
-      decisions: "Used AI to translate insurance jargon into plain English instead of building a traditional form validator, making the tool accessible to non-technical staff. Decided against PDF upload functionality to avoid HIPAA complexity and storage risks in an MVP. Mocked data instead of using real PHI to maintain privacy compliance.",
-      skills: "AI integration, healthcare data workflows, privacy-aware design, user-focused simplification, React"
-    },
-    image: claimsNavigatorImg,
-    link: "https://github.com/mitsk2002/claims-navigator",
-    repo: "https://github.com/mitsk2002/claims-navigator",
+  id: 3,
+  title: "Claims Navigator",
+  summary: {
+    who: "Patients navigating confusing insurance denials AND billing teams analyzing claim rejections",
+    problem: "Patients receive denial letters in impenetrable medical-legal jargon and don't know what happened or what to do next. Meanwhile, billing teams manually review denial codes for hours, cross-referencing payer guidelines to determine corrective actions. The US healthcare system loses $262B annually to claim denials.",
+    impact: "Reduces patient anxiety by translating insurance jargon into plain English with actionable next steps. For providers, cuts manual claim review time by ~70% through AI-powered denial analysis with 85%+ confidence scoring, helping billing teams resolve denials faster and recover revenue.",
+    decisions: "Built as microservices architecture—Python FastAPI for AI orchestration (better ML ecosystem) and Node.js/Express for patient-facing features. Chose Claude Sonnet 4 over GPT for superior reasoning on complex healthcare logic. Implemented RAG pattern by filtering 15 denial scenarios to 3-5 most relevant per claim before prompt injection, avoiding context window bloat. Enforced structured JSON outputs rather than parsing free-form responses to ensure reliability in healthcare context.",
+    skills: "React, TypeScript, Python, FastAPI, Node.js, Claude API, RAG patterns, prompt engineering, microservices architecture, healthcare domain knowledge (revenue cycle management, medical billing, patient navigation)"
   },
+  image: claimsNavigatorImg,
+  link: "", // Add when you deploy the live patient tool
+  repo: "https://github.com/mitsk2002/claims-navigator",
+},
 ];
