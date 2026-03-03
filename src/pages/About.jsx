@@ -9,7 +9,7 @@ export default function About() {
       <h1>From Healthcare to Health Tech</h1>
 
 <p>
-  I spent 7 years as a licensed massage therapist in Richardson, Texas, 
+  I spent 10 years as a licensed massage therapist in chiropractic clinics,
   where I saw firsthand how broken healthcare systems drain providers 
   and confuse patients.
 </p>
