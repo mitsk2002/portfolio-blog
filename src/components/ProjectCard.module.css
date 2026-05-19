@@ -1,0 +1,90 @@
+.projectCard {
+  display: block;
+  border: 0.5px solid var(--gold-border);
+  background: var(--bg-card);
+  padding: 32px;
+  margin-bottom: 12px;
+  position: relative;
+  transition: border-color 0.25s, background 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.projectCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold-glow) 0%, var(--bronze) 100%);
+  box-shadow: 0 0 10px rgba(212, 168, 75, 0.4);
+}
+
+.projectCard:hover {
+  border-color: rgba(212, 168, 75, 0.4);
+  background: var(--bg-card-hover);
+}
+
+.projectTag {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  background: var(--gold-light);
+  border: 0.5px solid var(--gold-border);
+  padding: 4px 10px;
+}
+
+.projectMeta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.projectTitle {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
+  letter-spacing: 0.03em;
+  margin: 0 0 10px;
+  text-shadow: 0 0 30px rgba(232, 196, 112, 0.15);
+}
+
+.projectDesc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0 0 20px;
+  max-width: 600px;
+}
+
+.projectStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stackChip {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--stone-light);
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  padding: 4px 12px;
+}
+
+.projectArrow {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  color: var(--accent-gold);
+  font-size: 16px;
+  opacity: 0.4;
+}

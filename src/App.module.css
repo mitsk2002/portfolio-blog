@@ -1,10 +1,27 @@
 /* App.module.css */
 
 :root {
-  --font-body: 'Inter', sans-serif;
-  --primary-color: #000000;
-  --background-color: #ffffff;
-  --accent-gold: #d4af37;
+  --font-body: "Inter", sans-serif;
+  --font-display: "Cinzel", serif;
+  --primary-color: #f0ead8;
+  --background-color: #1c1a16;
+  --bg-secondary: #232018;
+  --bg-card: #1f1d19;
+  --bg-card-hover: #222018;
+  --bg-cell: #242118;
+  --accent-gold: #d4a84b;
+  --gold-glow: #e8c470;
+  --gold-light: rgba(212, 168, 75, 0.18);
+  --gold-border: rgba(212, 168, 75, 0.22);
+  --bronze: #9c7a3a;
+  --stone: #6b6358;
+  --stone-light: #9a9080;
+  --text-secondary: #c8bfa8;
+  --text-muted: #7a7060;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,10 +30,10 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--primary-color);
-}
-
-h1, h2, h3 {
-  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
 }
 
 a {
@@ -24,29 +41,45 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--gold-glow);
+  text-shadow: 0 0 18px rgba(232, 196, 112, 0.35);
+}
+
+p,
+li {
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+strong {
+  color: var(--gold-glow);
+  font-weight: 500;
+  text-shadow: 0 0 12px rgba(232, 196, 112, 0.25);
 }
 
 .appWrapper {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  background-color: var(--background-color);
 }
 
-.backgroundGeometry {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  opacity: 0.03;
-  transform: translate(-50%, -50%);
+.sacredBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.05;
 }
 
 .content {
@@ -54,16 +87,8 @@ a:hover {
   z-index: 1;
 }
 
-.appWrapper {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  
-  /* CSS Sacred Geometry inspired background */
-  background:
-    radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 2px, transparent 3px),
-    radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 5px, transparent 6px),
-    radial-gradient(circle at center, rgba(212, 175, 55, 0.03) 10px, transparent 11px);
-  background-repeat: repeat;
-  background-size: 120px 120px;
+.pageWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
 }

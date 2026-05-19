@@ -1,10 +1,10 @@
-import React from "react";
 import styles from "./About.module.css";
+import SectionHeader from "../components/SectionHeader";
 
 export default function About() {
   return (
     <main className={styles.container}>
-      <h1 className={styles.heading}>About Me</h1>
+      <SectionHeader title="About" className={styles.pageHeader} />
 
       <h1>From Healthcare to Health Tech</h1>
 

@@ -1,34 +1,53 @@
-// Footer.jsx
-import styles from './Footer.module.css';
+import { ContactSigil, FooterSigil } from "./Sigils";
+import styles from "./Footer.module.css";
 
 function Footer() {
+  const year = new Date().getFullYear();
+  const romanYear = year === 2025 ? "MMXXV" : year === 2026 ? "MMXXVI" : String(year);
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.bg} />
-
-      <div className={styles.contact}>
-        <p>📫 Reach out directly at: <strong>mitsk2002@gmail.com</strong></p>
-        <p>
-          Connect with me on{' '}
+      <section id="contact" className={styles.contactSection}>
+        <ContactSigil className={styles.contactSigil} />
+        <p className={styles.contactIntro}>
+          Available for remote part-time roles in healthcare tech, content, translation
+          &amp; localization.
+        </p>
+        <div className={styles.contactLinks}>
           <a
-            href="https://www.linkedin.com/in/mitsukubo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>{' '}
-          or check out my{' '}
-          <a
+            className={styles.contactLink}
             href="https://github.com/mitsk2002"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
-          </a>.
-        </p>
-      </div>
+          </a>
+          <a
+            className={styles.contactLink}
+            href="https://www.linkedin.com/in/mitsukubo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a className={styles.contactLink} href="mailto:mitsk2002@gmail.com">
+            Email
+          </a>
+          <a
+            className={styles.contactLink}
+            href="https://mitsukubo.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portfolio
+          </a>
+        </div>
+      </section>
 
-      <p>&copy; {new Date().getFullYear()} Mitsu Kubo. All rights reserved.</p>
+      <div className={styles.footerBar}>
+        <FooterSigil />
+        <p className={styles.footerCopy}>Mitsu Kubo · {romanYear}</p>
+      </div>
     </footer>
   );
 }

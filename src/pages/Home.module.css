@@ -1,64 +1,203 @@
-/* src/pages/Home.module.css */
-.container {
-  position: relative;
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  color: #111;
-  font-family: 'Inter', sans-serif;
+.home {
+  padding-bottom: 24px;
+}
+
+.hero {
+  padding: 80px 0 60px;
   text-align: center;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 1rem;
+.heroSigil {
+  display: block;
+  margin: 0 auto 36px;
 }
 
-.subtitle {
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 2rem;
+.heroEyebrow {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin: 0 0 20px;
 }
 
-.intro {
-  font-size: 1rem;
-  color: #444;
-  max-width: 700px;
+.heroName {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: #f5edd8;
+  text-shadow:
+    0 0 40px rgba(232, 196, 112, 0.2),
+    0 0 80px rgba(212, 168, 75, 0.1);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--accent-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+  text-shadow: 0 0 20px rgba(212, 168, 75, 0.4);
+}
+
+.heroRule {
+  width: 120px;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  margin: 0 auto 24px;
+  box-shadow: 0 0 8px rgba(212, 168, 75, 0.4);
+}
+
+.heroBio {
+  max-width: 520px;
   margin: 0 auto;
-  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
-.geometryBackground {
+.disciplinesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--gold-border);
+  border: 0.5px solid var(--gold-border);
+  margin-bottom: 72px;
+}
+
+.disciplineCell {
+  background: var(--bg-cell);
+  padding: 32px 24px;
+  position: relative;
+}
+
+.disciplineCell::before {
+  content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/geometry-bg.svg');
-  background-repeat: repeat;
-  background-size: contain;
-  opacity: 0.05;
-  z-index: 0;
-  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 1.5px;
+  background: var(--accent-gold);
+  box-shadow: 0 0 8px rgba(212, 168, 75, 0.6);
 }
 
-.homeIntro {
-  max-width: 700px;
-  margin: 2rem auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  padding: 1rem;
+.disciplineLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-glow);
+  margin: 0 0 10px;
+  text-shadow: 0 0 12px rgba(232, 196, 112, 0.4);
 }
 
-.homeIntro ul {
-  /* list-style-type: disc;  */
-  padding-left: 1.5rem;
-  margin-top: 1rem;
+.disciplineDesc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
 }
 
-.homeIntro li {
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  text-align: left;
+.compactHeader {
+  margin-top: 56px;
+}
+
+.mosaicDivider {
+  display: block;
+  margin: 16px auto;
+}
+
+.projectList {
+  margin-top: 20px;
+  margin-bottom: 72px;
+}
+
+.viewAllLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-glow);
+  text-shadow: 0 0 12px rgba(232, 196, 112, 0.35);
+  transition: text-shadow 0.2s;
+}
+
+.viewAllLink:hover {
+  text-shadow: 0 0 18px rgba(232, 196, 112, 0.6);
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 72px;
+}
+
+.skillsGroup {
+  padding: 24px;
+  border: 0.5px solid var(--gold-border);
+  background: var(--bg-card);
+}
+
+.skillsGroupTitle {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-glow);
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid var(--gold-border);
+  text-shadow: 0 0 14px rgba(232, 196, 112, 0.45);
+}
+
+.skillsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.skillsList li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.5px solid rgba(255, 255, 255, 0.06);
+  padding: 4px 12px;
+  font-weight: 300;
+}
+
+#disciplines,
+#selected-work,
+#knowledge {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .disciplinesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroName {
+    font-size: 32px;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
 }

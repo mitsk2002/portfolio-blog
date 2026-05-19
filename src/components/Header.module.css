@@ -1,57 +1,64 @@
 .header {
-  position: relative;
-  padding: 1rem;
-  background-color: #f9f7f1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #d4af37;
-  font-family: 'Inter', sans-serif;
-  overflow: hidden;
+  padding: 28px 0 20px;
+  border-bottom: 0.5px solid var(--gold-border);
 }
 
-.bg {
-  background-image: url('/images/flower-of-life-bg.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 120px;
-  opacity: 0.05;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-}
-
-.logo,
-.nav,
-.link {
-  z-index: 1;
-}
-
-.logo {
-  margin: 0;
-  font-weight: 600;
-  color: #222;
-}
-
-.nav {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.link {
+.brand {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  color: #222;
+  gap: 12px;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-.link:hover {
-  color: #d4af37;
+.sigil {
+  flex-shrink: 0;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--gold-glow);
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(232, 196, 112, 0.35);
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone-light);
+  text-decoration: none;
+  font-family: var(--font-display);
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--gold-glow);
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
 }

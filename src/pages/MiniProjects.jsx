@@ -1,48 +1,27 @@
-import React from "react";
 import projects from "../data/projects";
+import SectionHeader from "../components/SectionHeader";
+import ProjectCard from "../components/ProjectCard";
 import styles from "./MiniProjects.module.css";
 
 function MiniProjects() {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>Mini Projects</h1>
-      <div className={styles.grid}>
+    <main className={styles.container}>
+      <SectionHeader title="Mini Projects" className={styles.pageHeader} />
+
+      <div className={styles.projectList}>
         {projects.map((project) => (
-          <div key={project.id} className={styles.card}>
-            {/* ✅ Only render the image if it exists */}
-            {project.image && (
-              <img
-                src={project.image}
-                alt={project.title}
-                className={styles.thumbnail}
-              />
-            )}
-
-            <h2 className={styles.title}>{project.title}</h2>
-            <p className={styles.description}>{project.description}</p>
-
-            <div className={styles.links}>
-              <a
-                href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                Repo
-              </a>
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                Live
-              </a>
-            </div>
-          </div>
+          <ProjectCard
+            key={project.id}
+            tags={project.tech?.slice(0, 2) || ["API"]}
+            title={project.title}
+            description={project.description}
+            stack={project.tech || []}
+            href={project.live}
+            repo={project.repo}
+          />
         ))}
       </div>
-    </div>
+    </main>
   );
 }
 

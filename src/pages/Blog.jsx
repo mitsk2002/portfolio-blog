@@ -1,16 +1,15 @@
 import { useState } from "react";
+import SectionHeader from "../components/SectionHeader";
+import styles from "./Blog.module.css";
 
 function Blog() {
-  // Step 1: Set up state for blog posts
   const [posts, setPosts] = useState([
-    { id: 1, title: "My first blog post", content: "Hello world!" }
+    { id: 1, title: "My first blog post", content: "Hello world!" },
   ]);
 
-  // Step 2: Set up state for new post form
   const [newTitle, setNewTitle] = useState("");
   const [newContent, setNewContent] = useState("");
 
-  // Step 3: Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!newTitle || !newContent) return;
@@ -18,7 +17,7 @@ function Blog() {
     const newPost = {
       id: Date.now(),
       title: newTitle,
-      content: newContent
+      content: newContent,
     };
 
     setPosts([newPost, ...posts]);
@@ -27,32 +26,32 @@ function Blog() {
   };
 
   return (
-    <main style={{ padding: "1rem" }}>
-      <h1>📝 Blog</h1>
+    <main className={styles.container}>
+      <SectionHeader title="Blog" className={styles.pageHeader} />
 
-      {/* Form to add new blog post */}
-      <form onSubmit={handleSubmit} style={{ marginBottom: "2rem" }}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"
           placeholder="Post title"
           value={newTitle}
           onChange={(e) => setNewTitle(e.target.value)}
-          style={{ display: "block", marginBottom: "0.5rem", width: "100%" }}
+          className={styles.input}
         />
         <textarea
           placeholder="Write your post..."
           value={newContent}
           onChange={(e) => setNewContent(e.target.value)}
-          style={{ display: "block", marginBottom: "0.5rem", width: "100%", height: "100px" }}
+          className={styles.textarea}
         />
-        <button type="submit">Add Post</button>
+        <button type="submit" className={styles.button}>
+          Add Post
+        </button>
       </form>
 
-      {/* Render blog posts */}
       {posts.map((post) => (
-        <article key={post.id} style={{ marginBottom: "1.5rem", borderBottom: "1px solid #ccc" }}>
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
+        <article key={post.id} className={styles.post}>
+          <h2 className={styles.title}>{post.title}</h2>
+          <p className={styles.content}>{post.content}</p>
         </article>
       ))}
     </main>
